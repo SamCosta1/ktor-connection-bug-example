@@ -6,6 +6,7 @@ import io.ktor.server.engine.*
 import io.ktor.server.request.*
 import io.ktor.server.response.*
 import io.ktor.server.routing.*
+import kotlinx.coroutines.delay
 
 object ServerContainer {
 
@@ -14,6 +15,8 @@ object ServerContainer {
     fun startServer() = embeddedServer(CIO, port = 8080) {
         routing {
             get("/") {
+                println("Now kill the app by tapping run or close in Xcode, then start it again")
+                delay(10000)
                 call.respondText("Hello, world!")
             }
         }

@@ -8,7 +8,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                      didFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]?) -> Bool
     {
 
-        RunExample.shared.thisCrashesOniOS()
+        RunExample.shared.thisCrashesOniOSUponAppRelaunch()
 //        RunExample.shared.thisDoesNotCrash()
         return true
     }
